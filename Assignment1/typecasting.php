@@ -36,6 +36,15 @@
     $i4 = (int) $array;
     $d4 = (double) $array;
     $f4 = (float) $array;
+
+    //null
+    $null = null;
+
+    $i5 = (int) $null;
+    $d5 = (double) $null;
+    $f5 = (float) $null;
+    $s4 = (string) $null;
+    $a5 = (array) $null;
 ?>
 
 <body>
@@ -46,7 +55,7 @@
                 <th>Variable Type</th>
                 <th>Variable Value</th>
                 <th>Converted Type</th>
-                <th>Converted Type</th>
+                <th>Converted Value</th>
             </tr>
             <tr>
                 <td rowspan="4">double</td>
@@ -137,9 +146,9 @@
             <!-- array -->
             
             <tr>
-                <td rowspan="4">array</td>
-                <td rowspan="4"><?php echo gettype($array) ?></td>
-                <td rowspan="4"><?php print_r($array) ?></td>
+                <td rowspan="3">array</td>
+                <td rowspan="3"><?php echo gettype($array) ?></td>
+                <td rowspan="3"><?php print_r($array) ?></td>
                 <td><?php echo gettype($i4) ?></td>
                 <td><?php echo $i4 ?></td>
             </tr>
@@ -151,6 +160,29 @@
                 <td><?php echo gettype($f4) ?></td>
                 <td><?php echo $f4 ?></td>
             </tr>
+
+            <!-- null -->
+            
+            <tr>
+                <td rowspan="4">null</td>
+                <td rowspan="4"><?php echo gettype($null) ?></td>
+                <td rowspan="4"><?php echo $null ?></td>
+                <td><?php echo gettype($i5) ?></td>
+                <td><?php echo $i5 ?></td>
+            </tr>
+            <tr>
+                <td><?php echo gettype($d5) ?></td>
+                <td><?php echo $d5 ?></td>
+            </tr>
+            <tr>
+                <td><?php echo gettype($s4) ?></td>
+                <td><?php echo $s4 ?></td>
+            </tr>
+            <tr>
+                <td><?php echo gettype($a5) ?></td>
+                <td><?php print_r($a5)  ?></td>
+            </tr>
+
         </table>
     </center>
 </body>
